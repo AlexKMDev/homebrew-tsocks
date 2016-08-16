@@ -6,7 +6,7 @@ class Tsocks < Formula
   homepage 'http://github.com/pc/tsocks'
   head 'https://github.com/pc/tsocks.git'
  
-  depends_on 'autoconf' => :build if MacOS.xcode_version.to_f >= 4.3
+  depends_on 'autoconf' => :build if MacOS::Xcode.version.to_f >= 4.3
  
   def install
     system "autoconf", "-v"
